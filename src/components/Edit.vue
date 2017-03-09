@@ -36,7 +36,7 @@
     data() {
       return {
         book: {},
-        apiPath: 'http://localhost:8080/books',
+        apiPath: process.env.API_PATH || 'http://localhost:8080',
         alert: '',
       }
     },
@@ -46,7 +46,7 @@
         let config = {
           headers: {'Authorization': `Bearer ${localStorage.token}`},
         }
-        axios.get(`${vm.apiPath}/${id}`, config).then(function(response) {
+        axios.get(`${vm.apiPath}/books/${id}`, config).then(function(response) {
           console.log(response.data);
           vm.book = response.data;
         })
@@ -65,7 +65,7 @@
           let config = {
             headers: {'Authorization': `Bearer ${localStorage.token}`},
           }
-          axios.put(`${vm.apiPath}/${this.$route.params.id}`, updateBook, config).then(function(response) {
+          axios.put(`${vm.apiPath}/books/${this.$route.params.id}`, updateBook, config).then(function(response) {
             console.log(response);
             vm.$router.push({ path: '/list', query: {alert: 'Book updated successfully' }});
           }).catch(function(error) {

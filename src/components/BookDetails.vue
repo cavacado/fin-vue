@@ -20,7 +20,7 @@
     name: 'bookdetails',
     data() {
       return {
-        apiPath: 'http://localhost:8080/books',
+        apiPath: process.env.API_PATH || 'http://localhost:8080',
         book: {},
       }
     },
@@ -30,7 +30,7 @@
         let config = {
           headers: {'Authorization': `Bearer ${localStorage.token}`},
         }
-        axios.get(`${vm.apiPath}/${id}`, config).then(function(response) {
+        axios.get(`${vm.apiPath}/books/${id}`, config).then(function(response) {
           // console.log(response.data);
           vm.book = response.data;
         })
@@ -41,7 +41,7 @@
         let config = {
           headers: {'Authorization': `Bearer ${localStorage.token}`},
         }
-        axios.delete(`${vm.apiPath}/${id}`, config).then(function(response) {
+        axios.delete(`${vm.apiPath}/books/${id}`, config).then(function(response) {
           console.log(response);
           vm.$router.push({ path: '/list', query: { alert: 'Book deleted!'}});
         })

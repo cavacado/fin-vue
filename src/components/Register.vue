@@ -53,7 +53,7 @@ export default {
           console.log(response);
           vm.$router.push({ path: '/', query: {alert: 'User registered successfully' }});
         }).catch(function(error) {
-          console.log(error);
+          // console.log(error);
         })
         e.preventDefault();
       }

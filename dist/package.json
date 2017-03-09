@@ -1,0 +1,10 @@
+{
+ "name": "fin-vue",
+ "version": "1.0.0",
+ "description": "front end client to consume backend API",
+ "author": "cavacado",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}

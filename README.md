@@ -1,64 +1,59 @@
 # fin-vue
 
-This is the starter code for WDI projects. Please update this README file with information specific to your project. Replace this paragraph for instance, with a short description of your project. Then update the sections below. Refer to your project specificaion for instructions on how to submit your projects.
+This is the client, frontend repo for my final project in WDI.
+
+It is pretty basic, it is a SPA (single-page-application) built on Vue2.0js front end framework consuming the backend RESTful API.
+
+It implements JSON web tokens as well and logs the token into localStorage.
+
+It utilises Vue router to render the different components for fake routing.
 
 ## Getting Started
 
-Provide instructions here about how to get your project running on our local machine. Do we just need to clone and open a certain file or do we need to install anything first.
+You should use this application in conjunction with the backend server API.
+
+```
+npm run dev
+```
+to start the server on http://localhost:8888
+
+from here, log in as a user or register as a user.
 
 ### Prerequisites
 
-What is needed to install and run the project, how do we install them
+install the relevant dependencies via
 
 ```
-Code example
+npm install --save
 ```
 
-### How to Use
-
-A step by step guide on how to install and use the project, for example if this is a game, how do we play it.
-
-
-```
-Code example
-```
-
-More steps...
-
-```
-until finished
-```
-
+and npm run dev to start the server if you clone the repo.
 
 ## Tests
 
-Did you write automated tests? If so, how do we run them.
+No tests were written for the frontend.
 
-
-```
-Code example
-```
 
 ## Live Version
 
-Where is this deployed online (github pages, heroku etc), give us the link and any access details we need.
+The live version of this web client will be hosted at:
 
 ## Built With
 
 What did you use to build it, list the technologies, plugins, gems, packages etc.
 
-* [jQuery](http://jquery.com/) - jQuery for example is something you likely used
+* vue 2.0js
+* axios
+* webpack
 
 ## Workflow
 
-Did you write user stories, draw wireframes, use task tracking, produce ERDs? Did you use source control, with regular commits? Include links to them here.
+Workflow was bad, did not commit regularly.
 
 ## Authors
 
 Did you collaborate with others on this project, list them here
 
-* **John McClain** - *Responsible for keeping vests white* - [GithubUserName](https://github.com/GithubUserName)
+* **Just me**
 
 ## Acknowledgments
-
-* Hat tip to anyone who's code was used, for example [this was a useful starting point for creating this template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).

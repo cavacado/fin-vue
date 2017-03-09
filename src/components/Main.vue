@@ -13,6 +13,9 @@
           <router-link to='/register'><button class='btn btn-success'>Register now!</button></router-link>
           <router-link to='/login'><button class='btn btn-primary'>Login now!</button></router-link>
         </div>
+        <blockquote>
+          <p>{{quote}}</p>
+        </blockquote>
       </div>
 
     </div>
@@ -20,11 +23,13 @@
 
 <script>
   import Alert from './Alert.vue';
+  import axios from 'axios';
   export default {
     name: 'main',
     data() {
       return {
         alert: '',
+        quote: '',
       }
     },
     methods: {

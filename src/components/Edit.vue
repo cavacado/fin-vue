@@ -61,7 +61,6 @@
             author: this.book.author,
             description: this.book.description,
             read: this.book.read,
-            userId: 1
           }
           let config = {
             headers: {'Authorization': `Bearer ${localStorage.token}`},

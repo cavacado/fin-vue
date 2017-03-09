@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       user: {},
-      apiPath: process.env.API_PATH || 'http://localhost:8080',
+      apiPath: process.env.API_PATH || 'http://localhost:8080/',
       alert: '',
     }
   },
@@ -49,7 +49,7 @@ export default {
           email: this.user.email,
           password: this.user.password,
         }
-        axios.post(`${vm.apiPath}/register`, newUser).then(function(response) {
+        axios.post(`${vm.apiPath}register`, newUser).then(function(response) {
           console.log(response);
           vm.$router.push({ path: '/', query: {alert: 'User registered successfully' }});
         }).catch(function(error) {

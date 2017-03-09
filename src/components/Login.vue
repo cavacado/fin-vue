@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       user: {},
-      apiPath: process.env.API_PATH || 'http://localhost:8080',
+      apiPath: process.env.API_PATH || 'http://localhost:8080/',
       alert: '',
     }
   },
@@ -41,7 +41,7 @@ export default {
         email: this.user.email,
         password: this.user.password
       }
-      axios.post(`${vm.apiPath}/login`, verifyUser).then(function(response) {
+      axios.post(`${vm.apiPath}login`, verifyUser).then(function(response) {
         console.log(response);
         localStorage.setItem('userId', response.data.userId);
         localStorage.setItem('token', response.data.token);

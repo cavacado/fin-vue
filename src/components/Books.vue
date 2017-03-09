@@ -35,7 +35,7 @@
     data() {
       return {
         books: [],
-        apiPath: process.env.API_PATH || 'http://localhost:8080',
+        apiPath: process.env.API_PATH || 'http://localhost:8080/',
         alert: '',
         filterInput: ''
       }
@@ -46,7 +46,7 @@
         let config = {
           headers: {'Authorization': `Bearer ${localStorage.token}`},
         }
-        axios.get(`${vm.apiPath}/${localStorage.userId}/books`, config).then(function(response) {
+        axios.get(`${vm.apiPath}${localStorage.userId}/books`, config).then(function(response) {
           // console.log(response.data);
           vm.books = response.data
         })
